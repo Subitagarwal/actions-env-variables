@@ -7,8 +7,8 @@ jobs:
   test:
     env:
       MONGODB_CLUSTER_ADDRESS: cluster0.r2ze2.mongodb.net
-      MONGODB_USERNAME: subitagarwal
-      MONGODB_PASSWORD: IkAy5uQTA8xNJthR
+      MONGODB_USERNAME: ${{secrets.USERNAME}}
+      MONGODB_PASSWORD: ${{secrets.PASSWORD}}
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
