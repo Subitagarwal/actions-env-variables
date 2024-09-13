@@ -5,10 +5,11 @@ env:
   PORT: 8080
 jobs:
   test:
+    environment: testing
     env:
       MONGODB_CLUSTER_ADDRESS: cluster0.r2ze2.mongodb.net
-      MONGODB_USERNAME: ${{secrets.USERNAME}}
-      MONGODB_PASSWORD: ${{secrets.PASSWORD}}
+      MONGODB_USERNAME: ${{MONGODB_USERNAME}}
+      MONGODB_PASSWORD: ${{MONGODB_PASSWORD}}
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
